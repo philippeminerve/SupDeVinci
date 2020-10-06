@@ -1,4 +1,11 @@
-unsigned int ADCValue;
+/*
+  Capteur ultrasonic US-016
+  by Philippe MARTIN
+  modified Sep 2020
+  This example code is in the public domain
+*/
+
+int ADCValue;
 void setup(){
     Serial.begin(9600);
 }
