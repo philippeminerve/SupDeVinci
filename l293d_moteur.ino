@@ -25,15 +25,15 @@ void loop() {
 	digitalWrite(in2_moteur, LOW);
 	delay( 3000 );
 	// Le moteur est à l'arrêt
-digitalWrite(in1_moteur, LOW); 
-digitalWrite(in2_moteur, LOW);
-delay(500);
-// Le moteur tourne dans le sens inverse
-digitalWrite(in1_moteur, LOW);
-digitalWrite(in2_moteur, HIGH);
-delay( 3000 ); 
-// Le moteur est à l'arrêt
-digitalWrite(in1_moteur, LOW);
-digitalWrite(in2_moteur, LOW);
-delay(500);
+	digitalWrite(in1_moteur, LOW); 
+	digitalWrite(in2_moteur, LOW);
+	delay(500);
+	// Le moteur tourne dans le sens inverse
+	digitalWrite(in1_moteur, LOW);
+	digitalWrite(in2_moteur, HIGH);
+	delay( 3000 ); 
+	// Le moteur est à l'arrêt
+	digitalWrite(in1_moteur, LOW);
+	digitalWrite(in2_moteur, LOW);
+	delay(500);
 }
