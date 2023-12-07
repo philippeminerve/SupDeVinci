@@ -49,7 +49,7 @@ void loop()
   digitalWrite(enablePin, LOW);
   int speed = 0;
   for (speed = 0; speed <= 255; speed += 25) {
-        analogWrite(enablePin, speed);; 
+        analogWrite(enablePin, speed); 
         delay(500);
     }
   
