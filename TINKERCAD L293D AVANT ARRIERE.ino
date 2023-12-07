@@ -1,12 +1,12 @@
-//
-Pilotage de moteur DC via L293D
+/*
+  Pilotage de moteur DC via L293D
 
   by Philippe MARTIN
 
   modified Nov 2023
 
   This example code is in the public domain
-//
+*/
 
 const int controlPin1 = 2;
 const int controlPin2 = 3;
@@ -42,4 +42,21 @@ void loop()
   digitalWrite(controlPin2, LOW);
   digitalWrite(enablePin, LOW);
   delay(1000); // Wait for 1000 millisecond(s)
+  
+  //increase speed
+  digitalWrite(controlPin1, HIGH);
+  digitalWrite(controlPin2, LOW);
+  digitalWrite(enablePin, LOW);
+  int speed = 0;
+  for (speed = 0; speed <= 255; speed += 25) {
+        analogWrite(enablePin, speed);; 
+        delay(500);
+    }
+  
+  //stop
+  digitalWrite(controlPin1, LOW);
+  digitalWrite(controlPin2, LOW);
+  digitalWrite(enablePin, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+
 }
