@@ -1,8 +1,8 @@
 /*
-  Bouton poussoir + LED
+  ECG
 
   by Philippe MARTIN
-  modified Sep 2020
+  modified Dec 2023
 
   This example code is in the public domain
 
