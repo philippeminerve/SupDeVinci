@@ -7,23 +7,18 @@
   This example code is in the public domain
 
 */
-
 void setup() {
-  pinMode(10,INPUT);
-  pinMode(11,INPUT);
-
+  Serial.begin(9600);
+  pinMode(8, INPUT); // Setup for leads off detection LO +
+  pinMode(9, INPUT); // Setup for leads off detection LO -
 }
 
 void loop() {
-  Serial.begin(9600);
-  if((digitalRead(10)==1)||(digitalRead(11)==1)){
-      Serial.println("ECG");
-  }
-  else{
-      Serial.println(analogRead(A1));
-  }
-  delay(100);
-  Serial.end();
-  delay(100);
+  if((digitalRead(8) == 1) || (digitalRead(9) == 1)){ //check if leads are removed
+  Serial.println("leads off!");
 }
-
+else{
+  Serial.println(analogRead(A0));
+}
+delay(1);
+}
